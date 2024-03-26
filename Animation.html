@@ -6,21 +6,13 @@
   <link rel="stylesheet" type="text/css" href="Animation.css">
 </head>
 
-<div class="accordion">
-  <div class="menu" onclick="toggle()">
-  メニュー
-  </div>
-  <ul>
-    <li>ハンバーガー</li>
-    <li>チーズバーガー</li>
-    <li>テリヤキバーガー</li>
-    <li>ベーコンバーガー</li>
-    <li>ベジタブルバーガー</li>
-    <li>ライスバーガー</li>
-  </ul>
+<div class="menubutton" onclick="toggle()">
+  <i></i>
+  <i></i>
+  <i></i>
 </div>
 <script>
   function toggle(){
-    document.querySelector('.accordion').classList.toggle('open');
+    document.querySelector('.menubutton').classList.toggle('open');
   }
 </script>

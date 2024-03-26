@@ -1,20 +1,40 @@
-.menu{
-  background:#01558d;
-  color:white;
-  padding:5px 10px;
-  cursor:pointer;
+.menubutton {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: black;
+  cursor: pointer;
+  z-index: 100;
 }
-
-.accordion ul{
-  margin:0;
-  background:#e7e7e7;
-  max-height:0;
-  overflow:hidden;
+.menubutton i{
+  display:block;
+  position:absolute;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:30px;
+  height:5px;
+  background:white;
   transition:all .5s;
 }
-.accordion.open ul{
-  max-height:300px;
+.menubutton i:first-child{
+  top:10px;
 }
-.accordion li{
-  padding: 5px 10px;
+.menubutton i:nth-child(2){
+  top:50%;
+}
+.menubutton i:last-child{
+  top:30px;
+}
+.menubutton.open i:first-child{
+  top:50%;
+  transform:translate(-50%,-50%)rotate(45deg);
+}
+.menubutton.open i:nth-child(2){
+  opacity:0;
+}
+.menubutton.open i:last-child{
+  top:50%;
+  transform:translate(-50%,-50%)rotate(-45deg);
 }
