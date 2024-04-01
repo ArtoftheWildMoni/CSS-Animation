@@ -1,17 +1,43 @@
-.spinner{
-  width: 50px;
-  height: 50px;
-  border: solid 5px transparent;
-  border-bottom-color: #01558d;
-  border-radius: 50%;
-  animation: guru-guru 1s linear infinite;
+.fadein{
+  height:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch {
+  width: 80px;
+  font-size: 14px;
+  background: #920000;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+  .switch:hover {
+  background: #f05050;
+}
+.hello {
+  width: 200px;
+  height: 150px;
+  background: #01558d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+  .hello.open {
+  opacity: 1;
+  animation: Fade-In 1s;
+}
+@keyframes Fade-In {
+  0% {
+  opacity: 0;
+  transform: translateY(30px);
   }
-
-@keyframes guru-guru{
-  0%{
-    transform:rotate(0);
-  }
-  100%{
-    transform:rotate(360deg);
+  100% {
+  opacity: 1;
+  transform: translateY(0);
   }
 }

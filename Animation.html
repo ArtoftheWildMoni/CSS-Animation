@@ -6,4 +6,16 @@
   <link rel="stylesheet" type="text/css" href="Animation.css">
 </head>
 
-<div class="spinner"></div>
+<div class="switch" onclick="toggle()">
+  ふわっと
+</div>
+<div class="fadein">
+  <div class="hello">
+    HELLO
+  </div>
+</div>
+<script>
+  function toggle(){
+    document.querySelector('.hello').classList.toggle('open');
+  }
+</script>
