@@ -1,43 +1,47 @@
-.fadein{
-  height:300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.scroll-icon{
+  position: relative;
+  width: 60px;
+  height: 100px;
+  border: solid 4px black;
+  border-radius: 30px;
+  box-sizing: border-box;
 }
-.switch {
-  width: 80px;
-  font-size: 14px;
-  background: #920000;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-  .switch:hover {
-  background: #f05050;
-}
-.hello {
-  width: 200px;
-  height: 150px;
-  background: #01558d;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.scroll-icon .dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
   opacity: 0;
+  animation: announce 1.5s linear infinite;
 }
-  .hello.open {
-  opacity: 1;
-  animation: Fade-In 1s;
+.scroll-icon .text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
 }
-@keyframes Fade-In {
+@keyframes announce {
   0% {
+  top: 10px;
   opacity: 0;
-  transform: translateY(30px);
+  }
+  20% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 1;
+  }
+  70% {
+  top: 80px;
+  opacity: 0;
   }
   100% {
-  opacity: 1;
-  transform: translateY(0);
+  top: 80px;
+  opacity: 0;
   }
 }
