@@ -1,12 +1,19 @@
-p{
-  margin:0;
-  padding-left:5px;
-  border-left:solid 4px #920000;
+.breadlist{
+  display:flex;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: dashed 2px #01558d;
+  font-size: 20px;
 }
-.notes {
-  font-size: 16px;
-  color: #920000;
+.breadlist li{
+  padding:0;
 }
-.notes::before {
-  content: '※';
+.breadlist li::after{
+  content:'>';
+  margin:0 5px;
+}
+.breadlist li:last-child::after {
+  display: none;
 }
