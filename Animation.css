@@ -1,19 +1,5 @@
-.breadlist{
-  display:flex;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-bottom: dashed 2px #01558d;
-  font-size: 20px;
-}
-.breadlist li{
-  padding:0;
-}
-.breadlist li::after{
-  content:'>';
-  margin:0 5px;
-}
-.breadlist li:last-child::after {
-  display: none;
+.head-design{
+  position:relative;
+  padding-left:25px;
+  border-bottom:solid 1px #ababab;
 }
